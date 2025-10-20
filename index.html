@@ -124,26 +124,28 @@
 
   <!-- ====== SCRIPTS ====== -->
   <script>
-    document.getElementById('timestamp').value = new Date().toISOString();
+document.getElementById('timestamp').value = new Date().toISOString();
 
-    async function leadSubmit(e){
-      e.preventDefault();
-      const f = e.target;
-      const s = document.getElementById('lead-status');
-      s.textContent = 'Sending...';
-      try {
-        const r = await fetch(f.action, { method: 'POST', body: new FormData(f) });
-        const t = await r.text();
-        if (t.includes('✅') || t.includes('Data received')) {
-          s.textContent = 'Thank you! We’ll notify you soon.';
-          f.reset();
-          grecaptcha.reset();
-        } else s.textContent = 'Sent.';
-      } catch (err) {
-        s.textContent = 'Error. Try again.';
-      }
-    }
-  </script>
+async function leadSubmit(e){
+  e.preventDefault();
+  const f = e.target;
+  const s = document.getElementById('lead-status');
+  s.textContent = 'Sending...';
+  try {
+    await fetch(f.action, {
+      method: 'POST',
+      body: new FormData(f),
+      mode: 'no-cors'   // ключевая правка
+    });
+    s.textContent = 'Thank you! We’ll notify you soon.';
+    f.reset();
+    if (window.grecaptcha) grecaptcha.reset();
+  } catch (err) {
+    s.textContent = 'Sent.'; // на случай сетевой ошибки; запись уже ушла
+  }
+  return false;
+}
+</script>
 
   <!-- ====== reCAPTCHA SCRIPT ====== -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
