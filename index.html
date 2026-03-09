@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sauna on Wheels — Book Now</title>
-  <meta name="description" content="Book a mobile wood-fired sauna session in Los Angeles & Orange County. Choose 3 hours or All Day." />
+  <meta
+    name="description"
+    content="Book a mobile wood-fired sauna session in Los Angeles & Orange County. Choose 3 hours, All Day, or support the sauna experience."
+  />
   <link rel="icon" href="favicon.ico" />
 
   <!-- Google tag (gtag.js) -->
@@ -17,34 +20,81 @@
   </script>
 
   <style>
-    :root { --brand:#ffb300; }
+    :root{
+      --brand:#ffb300;
+      --bg:#222;
+      --text:#fff;
+      --card-bg:rgba(0,0,0,.60);
+    }
 
-    html,body{margin:0;height:100%;}
-    body{font-family:Arial,sans-serif;color:#fff;background:#222;text-align:center;}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;height:100%}
+
+    body{
+      font-family:Arial,sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      text-align:center;
+    }
 
     header{
-      position:relative; padding:96px 16px 44px;
+      position:relative;
+      padding:96px 16px 44px;
       background:saunabeach.jpeg center/cover no-repeat;
     }
-    header::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.45)}
-    header h1,header p{position:relative;margin:0 auto;max-width:820px}
-    header h1{font-size:42px;line-height:1.1;margin-bottom:10px}
-    header p{font-size:18px;opacity:.95}
 
-    section{padding:28px 16px}
+    header::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,.45);
+    }
+
+    header h1,
+    header p{
+      position:relative;
+      margin:0 auto;
+      max-width:820px;
+    }
+
+    header h1{
+      font-size:42px;
+      line-height:1.1;
+      margin-bottom:10px;
+    }
+
+    header p{
+      font-size:18px;
+      opacity:.95;
+    }
+
+    section{
+      padding:28px 16px;
+    }
 
     .cta{
-      max-width:820px;margin:0 auto 14px;
-      color:#ffda66;font-weight:700;font-size:18px;
+      max-width:820px;
+      margin:0 auto 14px;
+      color:#ffda66;
+      font-weight:700;
+      font-size:18px;
     }
+
     .sub{
-      max-width:820px;margin:0 auto;
-      line-height:1.6;font-size:17px;opacity:.95;
+      max-width:820px;
+      margin:0 auto;
+      line-height:1.6;
+      font-size:17px;
+      opacity:.95;
     }
 
     .card{
-      margin:18px auto 0;max-width:520px;background:rgba(0,0,0,.6);
-      padding:16px;border-radius:12px;backdrop-filter:blur(2px);
+      margin:18px auto 0;
+      max-width:760px;
+      background:var(--card-bg);
+      padding:18px;
+      border-radius:12px;
+      backdrop-filter:blur(2px);
     }
 
     .grid{
@@ -60,19 +110,34 @@
       justify-content:space-between;
       gap:12px;
       width:100%;
-      padding:16px;
+      padding:16px 18px;
       border-radius:10px;
       font-size:18px;
       background:var(--brand);
       color:#000;
       text-decoration:none;
-      box-sizing:border-box;
       font-weight:700;
+      transition:transform .15s ease, opacity .15s ease;
     }
+
+    .btn:hover{
+      transform:translateY(-1px);
+      opacity:.95;
+    }
+
+    .btn span{
+      text-align:left;
+    }
+
     .btn small{
       font-size:14px;
       opacity:.85;
       font-weight:700;
+      white-space:nowrap;
+    }
+
+    .btn.donation{
+      background:#ffd56a;
     }
 
     .note{
@@ -82,7 +147,7 @@
       line-height:1.5;
     }
 
-    .yt, .threads, .ig, .tg, .sms, .wa{
+    .social-btn{
       position:fixed;
       right:16px;
       padding:12px 16px;
@@ -91,19 +156,32 @@
       box-shadow:0 2px 10px rgba(0,0,0,.3);
       font-weight:600;
       color:#fff;
+      z-index:20;
     }
 
     .wa{ bottom:16px; background:#25D366; }
     .sms{ bottom:72px; background:#007AFF; }
     .tg{ bottom:128px; background:#229ED9; }
     .ig{ bottom:184px; background:#E1306C; }
-    .threads{ bottom:240px; background:#000000; }
+    .threads{ bottom:240px; background:#000; }
     .yt{ bottom:296px; background:#FF0000; }
+    .tt{ bottom:352px; background:#111; }
 
-    footer{margin-top:36px;padding:20px;font-size:14px;opacity:.8}
+    footer{
+      margin-top:36px;
+      padding:20px;
+      font-size:14px;
+      opacity:.8;
+    }
 
-    @media(min-width:640px){
-      .grid{grid-template-columns:1fr 1fr;}
+    @media (min-width:640px){
+      .grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .grid .full{
+        grid-column:1 / -1;
+      }
     }
   </style>
 </head>
@@ -115,21 +193,42 @@
   </header>
 
   <section id="book">
-    <div class="cta">Bookings are open. Choose your session:</div>
+    <div class="cta">Bookings are open. Choose your option:</div>
+
     <p class="sub">
       We bring the sauna to your driveway or a private spot. Wood-fired heat • Clean setup • Simple booking through Calendly.
     </p>
 
     <div class="card">
       <div class="grid">
-        <a class="btn" href="https://calendly.com/gavrilkoff/30min" target="_blank" rel="noopener">
+        <a
+          class="btn"
+          href="https://calendly.com/gavrilkoff/30min"
+          target="_blank"
+          rel="noopener"
+        >
           <span>3 Hours Sauna</span>
           <small>Book →</small>
         </a>
 
-        <a class="btn" href="https://calendly.com/gavrilkoff/all-day-mobile-sauna-orange-county" target="_blank" rel="noopener">
+        <a
+          class="btn"
+          href="https://calendly.com/gavrilkoff/all-day-mobile-sauna-orange-county"
+          target="_blank"
+          rel="noopener"
+        >
           <span>All-Day Sauna (OC)</span>
           <small>Book →</small>
+        </a>
+
+        <a
+          class="btn donation full"
+          href="https://buy.stripe.com/8x26oH6ZcccNc54h1P2kw03"
+          target="_blank"
+          rel="noopener"
+        >
+          <span>Support the Sauna Experience — $60</span>
+          <small>Donate →</small>
         </a>
       </div>
 
@@ -140,12 +239,67 @@
   </section>
 
   <!-- Social / Contact Buttons -->
-  <a class="yt" href="https://youtube.com/@gavrilkoff?si=klQGgTpWaSfCCq9J" target="_blank" rel="noopener">YouTube</a>
-  <a class="threads" href="https://www.threads.com/@saunaonwheels.life" target="_blank" rel="noopener">Threads</a>
-  <a class="ig" href="https://www.instagram.com/saunaonwheels.life" target="_blank" rel="noopener">Instagram</a>
-  <a class="tg" href="https://t.me/+5yDwuRrGhBc5Y2I6" target="_blank" rel="noopener">Telegram</a>
-  <a class="sms" href="sms:+13236107634?&body=Hi%2C%20I%20want%20to%20book%20Sauna%20on%20Wheels" rel="noopener">Send SMS</a>
-  <a class="wa" href="https://wa.me/13236107634" target="_blank" rel="noopener">WhatsApp</a>
+  <a
+    class="social-btn tt"
+    href="https://www.tiktok.com/@saunaonwheels.life?_r=1&_t=ZS-94Y5TkQEMMu"
+    target="_blank"
+    rel="noopener"
+  >
+    TikTok
+  </a>
+
+  <a
+    class="social-btn yt"
+    href="https://youtube.com/@gavrilkoff?si=klQGgTpWaSfCCq9J"
+    target="_blank"
+    rel="noopener"
+  >
+    YouTube
+  </a>
+
+  <a
+    class="social-btn threads"
+    href="https://www.threads.com/@saunaonwheels.life"
+    target="_blank"
+    rel="noopener"
+  >
+    Threads
+  </a>
+
+  <a
+    class="social-btn ig"
+    href="https://www.instagram.com/saunaonwheels.life"
+    target="_blank"
+    rel="noopener"
+  >
+    Instagram
+  </a>
+
+  <a
+    class="social-btn tg"
+    href="https://t.me/+5yDwuRrGhBc5Y2I6"
+    target="_blank"
+    rel="noopener"
+  >
+    Telegram
+  </a>
+
+  <a
+    class="social-btn sms"
+    href="sms:+13236107634?&body=Hi%2C%20I%20want%20to%20book%20Sauna%20on%20Wheels"
+    rel="noopener"
+  >
+    Send SMS
+  </a>
+
+  <a
+    class="social-btn wa"
+    href="https://wa.me/13236107634"
+    target="_blank"
+    rel="noopener"
+  >
+    WhatsApp
+  </a>
 
   <footer>
     © 2026 Sauna on Wheels | info@saunaonwheels.life
