@@ -13,187 +13,246 @@
     gtag('config', 'G-85Z0LZQS16');
   </script>
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Georgia&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --brand:#ffb300;
-      --bg:#222;
-      --text:#fff;
-      --card-bg:rgba(0,0,0,.60);
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #1a1208;
+      color: #f5e6c8;
+      -webkit-font-smoothing: antialiased;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:'Inter', sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      text-align:center;
-      -webkit-font-smoothing:antialiased;
+
+    header {
+      background: linear-gradient(180deg, #0d0a04 0%, #2a1a08 60%, #1a1208 100%);
+      padding: 64px 20px 52px;
+      text-align: center;
+      border-bottom: 1px solid #5a3a1a;
+      position: relative;
+      overflow: hidden;
     }
-    header{
-      position:relative;
-      padding:100px 16px 60px;
-      background:url("saunabeach.jpeg") center/cover no-repeat;
+    header::before {
+      content: "";
+      position: absolute;
+      bottom: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 400px;
+      height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(200,100,30,0.2) 0%, transparent 70%);
+      pointer-events: none;
     }
-    header::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:rgba(0,0,0,.55);
+    .header-tag {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 5px;
+      color: #c87832;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 18px;
     }
-    header h1,
-    header p{
-      position:relative;
-      max-width:800px;
-      margin:0 auto;
+    header h1 {
+      font-family: 'Georgia', serif;
+      font-size: clamp(32px, 8vw, 48px);
+      font-weight: 700;
+      color: #f5e6c8;
+      line-height: 1.1;
+      margin-bottom: 14px;
+      text-shadow: 0 2px 24px rgba(200,100,30,0.25);
     }
-    header h1{
-      font-size:42px;
-      font-weight:700;
-      margin-bottom:12px;
-      letter-spacing:-0.5px;
+    header p {
+      font-size: clamp(14px, 3.5vw, 17px);
+      color: #c8a87a;
+      font-weight: 300;
+      letter-spacing: 0.3px;
     }
-    header p{
-      font-size:18px;
-      opacity:.9;
+
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 16px 64px;
     }
-    section{
-      padding:40px 20px;
-      max-width:800px;
-      margin:0 auto;
-      text-align:center;
+
+    .section { margin-top: 44px; }
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #c87832;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 18px;
     }
-    h2{
-      color:#ffda66;
-      margin-bottom:20px;
-      font-weight:600;
+
+    .btn-list { display: flex; flex-direction: column; gap: 10px; }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 20px;
+      background: linear-gradient(135deg, #2a1a08 0%, #1e1308 100%);
+      border: 1px solid #5a3a1a;
+      border-radius: 14px;
+      text-decoration: none;
+      color: #f5e6c8;
+      transition: border-color 0.2s, background 0.2s;
     }
-    .card{
-      margin-top:40px;
-      background:var(--card-bg);
-      padding:24px;
-      border-radius:16px;
-      text-align:center;
-      backdrop-filter:blur(6px);
+    .btn:hover {
+      border-color: #c87832;
+      background: linear-gradient(135deg, #341f0a 0%, #2a1a08 100%);
     }
-    .grid{
-      display:grid;
-      gap:14px;
-      grid-template-columns:1fr;
+    .btn-text { text-align: left; }
+    .btn-title {
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: 4px;
+      color: #f5e6c8;
     }
-    .btn{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      text-align:center;
-      padding:18px;
-      border-radius:12px;
-      background:var(--brand);
-      color:#000;
-      font-weight:700;
-      text-decoration:none;
-      transition:.2s ease;
+    .btn-desc {
+      font-size: 13px;
+      color: #9a7a52;
+      font-weight: 400;
     }
-    .btn:hover{
-      transform:translateY(-2px);
-      box-shadow:0 8px 20px rgba(0,0,0,.3);
+    .btn-price {
+      flex-shrink: 0;
+      background: #c87832;
+      color: #1a1208;
+      font-weight: 800;
+      font-size: 17px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      white-space: nowrap;
     }
-    .btn small{
-      font-weight:500;
-      margin-top:6px;
-      opacity:.8;
+
+    .btn-donate {
+      display: block;
+      text-align: center;
+      padding: 16px 20px;
+      border: 1px dashed #5a3a1a;
+      border-radius: 14px;
+      text-decoration: none;
+      color: #9a7a52;
+      font-size: 14px;
+      transition: border-color 0.2s, color 0.2s;
     }
-    footer{
-      margin-top:50px;
-      padding:30px 20px;
-      font-size:14px;
-      opacity:.9;
-      text-align:center;
+    .btn-donate:hover { border-color: #c87832; color: #c87832; }
+
+    .social-wrap { margin-top: 48px; text-align: center; }
+    .social-label {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #5a3a1a;
+      margin-bottom: 18px;
     }
-    .social{
-      margin-top:20px;
+    .social-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+    .social-links a {
+      padding: 10px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      transition: opacity 0.2s;
     }
-    .social a{
-      display:inline-block;
-      margin:6px;
-      padding:12px 16px;
-      border-radius:8px;
-      text-decoration:none;
-      color:#fff;
-      font-weight:600;
+    .social-links a:hover { opacity: 0.85; }
+
+    footer {
+      margin-top: 40px;
+      font-size: 12px;
+      color: #3a2510;
+      text-align: center;
     }
-    .sms{ background:#007AFF; }
-    .wa{ background:#25D366; }
-    .ig{ background:#E1306C; }
-    .tt{ background:#111; }
   </style>
 </head>
 <body>
+
 <header>
+  <div class="header-tag">🌲 Los Angeles & Orange County</div>
   <h1>Sauna on Wheels</h1>
   <p>Mobile Wood-Fired Sauna Rentals, Events & Memberships</p>
 </header>
-<section>
-  <div class="card">
-    <h2>Sauna Passes & Membership</h2>
-    <div class="grid">
+
+<main>
+
+  <div class="section">
+    <div class="section-label">🔥 Sauna Passes & Membership</div>
+    <div class="btn-list">
       <a class="btn" href="https://towlos.com/listing/enclosed-trailer/united-states/brea-ca/102602" target="_blank">
-        <span>Pickup Sauna Trailer Rental — $200</span>
-        <small>Pick up from our Brea location • Trailer rental only</small>
+        <div class="btn-text">
+          <div class="btn-title">Pickup Sauna Trailer Rental</div>
+          <div class="btn-desc">Pick up from our Brea location · Trailer rental only</div>
+        </div>
+        <div class="btn-price">$200</div>
       </a>
       <a class="btn" href="https://book.stripe.com/3cIbJ197k4Kl8SSeTH2kw0c" target="_blank">
-        <span>Lake Piru Sauna Ticket — $40</span>
-        <small>Valid for one day</small>
+        <div class="btn-text">
+          <div class="btn-title">Lake Piru Sauna Ticket</div>
+          <div class="btn-desc">Valid for one day</div>
+        </div>
+        <div class="btn-price">$40</div>
       </a>
       <a class="btn" href="https://book.stripe.com/14AcN5dnAekV2uufXL2kw0b" target="_blank">
-        <span>Lake Piru Unlimited Sauna Pass — $100</span>
-        <small>Unlimited sauna access during the event</small>
+        <div class="btn-text">
+          <div class="btn-title">Lake Piru Unlimited Sauna Pass</div>
+          <div class="btn-desc">Unlimited sauna access during the event</div>
+        </div>
+        <div class="btn-price">$100</div>
       </a>
       <a class="btn" href="https://buy.stripe.com/28E9AT83g90Bd985j72kw08" target="_blank">
-        <span>Monthly Membership — $149</span>
-        <small>Access to Sauna on Wheels events throughout Orange County</small>
+        <div class="btn-text">
+          <div class="btn-title">Monthly Membership</div>
+          <div class="btn-desc">Access to Sauna on Wheels events throughout Orange County</div>
+        </div>
+        <div class="btn-price">$149</div>
       </a>
     </div>
   </div>
-  <div class="card">
-    <h2>Private Sauna Rentals</h2>
-    <div class="grid">
+
+  <div class="section">
+    <div class="section-label">🏡 Private Sauna Rentals</div>
+    <div class="btn-list">
       <a class="btn" href="https://buy.stripe.com/7sYaEXgzMfoZd987rf2kw05" target="_blank">
-        <span>3 Hour Private Sauna — $450</span>
-        <small>Delivery, setup, firewood and pickup included</small>
+        <div class="btn-text">
+          <div class="btn-title">3 Hour Private Sauna</div>
+          <div class="btn-desc">Delivery, setup, firewood and pickup included</div>
+        </div>
+        <div class="btn-price">$450</div>
       </a>
       <a class="btn" href="https://buy.stripe.com/fZu6oH5V8ccNd9826V2kw04" target="_blank">
-        <span>Full Day Private Sauna — $600</span>
-        <small>Delivery, setup, firewood and pickup included</small>
+        <div class="btn-text">
+          <div class="btn-title">Full Day Private Sauna</div>
+          <div class="btn-desc">Delivery, setup, firewood and pickup included</div>
+        </div>
+        <div class="btn-price">$600</div>
       </a>
     </div>
   </div>
-  <div class="card">
-    <h2>Support Sauna on Wheels</h2>
-    <div class="grid">
-      <a class="btn" href="https://buy.stripe.com/8x26oH6ZcccNc54h1P2kw03" target="_blank">
-        <span>Donation</span>
-        <small>Support Sauna on Wheels</small>
-      </a>
+
+  <div class="section">
+    <div class="section-label">❤️ Support Sauna on Wheels</div>
+    <a class="btn-donate" href="https://buy.stripe.com/8x26oH6ZcccNc54h1P2kw03" target="_blank">
+      Donation — Support Sauna on Wheels
+    </a>
+  </div>
+
+  <div class="social-wrap">
+    <div class="social-label">Find Us</div>
+    <div class="social-links">
+      <a href="sms:+13236107634?&body=Hi%2C%20I%20want%20to%20book%20Sauna%20on%20Wheels" style="background:#007AFF">Text Us</a>
+      <a href="https://wa.me/13236107634" target="_blank" style="background:#25D366">WhatsApp</a>
+      <a href="https://www.instagram.com/saunaonwheels.life" target="_blank" style="background:#E1306C">Instagram</a>
+      <a href="https://www.tiktok.com/@saunaonwheels.life" target="_blank" style="background:#111">TikTok</a>
+      <a href="https://youtube.com/@gavrilkoff" target="_blank" style="background:#FF0000">YouTube</a>
     </div>
+    <footer>© 2026 Sauna on Wheels</footer>
   </div>
-</section>
-<footer>
-  © 2026 Sauna on Wheels
-  <div class="social">
-    <a class="sms" href="sms:+13236107634?&body=Hi%2C%20I%20want%20to%20book%20Sauna%20on%20Wheels">
-      Send Message
-    </a>
-    <a class="wa" href="https://wa.me/13236107634" target="_blank">
-      WhatsApp
-    </a>
-    <a class="ig" href="https://www.instagram.com/saunaonwheels.life" target="_blank">
-      Instagram
-    </a>
-    <a class="tt" href="https://www.tiktok.com/@saunaonwheels.life" target="_blank">
-      TikTok
-    </a>
-  </div>
-</footer>
+
+</main>
+
 </body>
 </html>
