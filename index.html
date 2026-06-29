@@ -3,7 +3,104 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sauna on Wheels — Book Now</title>
+  <title>Sauna on Wheels — Mobile Wood-Fired Sauna Rentals | Los Angeles & Orange County</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Mobile wood-fired sauna rentals, events & memberships in Los Angeles and Orange County. Book a private sauna delivery, Lake Piru sauna tickets, or monthly membership. We bring the heat to you." />
+  <meta name="keywords" content="sauna rental Los Angeles, mobile sauna LA, wood fired sauna Orange County, private sauna rental, sauna on wheels, sauna delivery LA, Lake Piru sauna, sauna membership Orange County, mobile sauna rental California" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Sauna on Wheels" />
+  <link rel="canonical" href="https://saunaonwheels.life/" />
+
+  <!-- Geo -->
+  <meta name="geo.region" content="US-CA" />
+  <meta name="geo.placename" content="Los Angeles, California" />
+
+  <!-- Open Graph (Facebook, Instagram, iMessage previews) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://saunaonwheels.life/" />
+  <meta property="og:title" content="Sauna on Wheels — Mobile Wood-Fired Sauna Rentals in LA & OC" />
+  <meta property="og:description" content="We bring a wood-fired sauna to your door. Private rentals, Lake Piru events & monthly memberships. Los Angeles & Orange County." />
+  <meta property="og:image" content="https://saunaonwheels.life/images/real3.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Sauna on Wheels" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sauna on Wheels — Mobile Wood-Fired Sauna Rentals in LA & OC" />
+  <meta name="twitter:description" content="We bring a wood-fired sauna to your door. Private rentals, events & memberships. Los Angeles & Orange County." />
+  <meta name="twitter:image" content="https://saunaonwheels.life/images/real3.jpg" />
+
+  <!-- JSON-LD Structured Data (Google rich results) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Sauna on Wheels",
+    "description": "Mobile wood-fired sauna rentals, events and memberships serving Los Angeles and Orange County, California.",
+    "url": "https://saunaonwheels.life",
+    "telephone": "+13236107634",
+    "image": "https://saunaonwheels.life/images/real3.jpg",
+    "priceRange": "$$",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Credit Card",
+    "areaServed": [
+      { "@type": "City", "name": "Los Angeles" },
+      { "@type": "City", "name": "Orange County" },
+      { "@type": "City", "name": "Brea" }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Brea",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://www.instagram.com/saunaonwheels.life",
+      "https://www.tiktok.com/@saunaonwheels.life",
+      "https://youtube.com/@gavrilkoff"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Sauna Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Lake Piru Sauna Ticket",
+          "price": "40",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "Lake Piru Unlimited Sauna Pass",
+          "price": "100",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "Monthly Membership",
+          "price": "149",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "3-Hour Private Sauna Rental",
+          "price": "450",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "Full Day Private Sauna Rental",
+          "price": "600",
+          "priceCurrency": "USD"
+        }
+      ]
+    }
+  }
+  </script>
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-85Z0LZQS16"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -365,6 +462,91 @@
       padding: 3px 10px;
     }
 
+    /* ─── GALLERY ─── */
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 200px 200px;
+      gap: 8px;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      display: block;
+      background: var(--bg3);
+    }
+
+    .gallery-big {
+      grid-row: span 2;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.06);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(14,11,6,0.75) 0%, transparent 50%);
+      display: flex;
+      align-items: flex-end;
+      padding: 14px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-overlay span {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--amber-light);
+      letter-spacing: 0.5px;
+    }
+
+    .gallery-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 20px;
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.2s;
+      background: rgba(232,137,42,0.03);
+    }
+
+    .gallery-cta:hover {
+      border-color: rgba(232,137,42,0.4);
+      color: var(--amber-light);
+      background: rgba(232,137,42,0.06);
+    }
+
+    @media (max-width: 480px) {
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 150px 150px;
+      }
+    }
+
     /* ─── DONATE ─── */
     .btn-donate {
       display: flex;
@@ -454,6 +636,14 @@
 
     footer a:hover { color: var(--text-muted); }
 
+    /* ─── GLOW DIVIDER ─── */
+    .glow-line {
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--amber-dark), transparent);
+      margin: 0 auto;
+      opacity: 0.5;
+    }
+
     /* ─── RESPONSIVE ─── */
     @media (max-width: 480px) {
       .stats { flex-wrap: wrap; }
@@ -522,6 +712,40 @@
 
 <!-- ─── MAIN ─── -->
 <main id="book">
+
+  <!-- GALLERY -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-line"></div>
+      <div class="section-label">📸 Experience the Heat</div>
+      <div class="section-line" style="background: linear-gradient(to left, var(--card-border), transparent)"></div>
+    </div>
+    <div class="gallery">
+      <a class="gallery-item gallery-big" href="https://www.instagram.com/saunaonwheels.life" target="_blank">
+        <img src="images/real3.jpg" alt="Friends in sauna playing chess" />
+        <div class="gallery-overlay"><span>@saunaonwheels.life</span></div>
+      </a>
+      <a class="gallery-item" href="https://www.instagram.com/saunaonwheels.life" target="_blank">
+        <img src="images/real5.jpg" alt="Wood-fired stove" />
+        <div class="gallery-overlay"><span>View on Instagram</span></div>
+      </a>
+      <a class="gallery-item" href="https://www.instagram.com/saunaonwheels.life" target="_blank">
+        <img src="images/real2.jpg" alt="Sauna interior with stove" />
+        <div class="gallery-overlay"><span>View on Instagram</span></div>
+      </a>
+      <a class="gallery-item" href="https://www.instagram.com/saunaonwheels.life" target="_blank">
+        <img src="images/real4.jpg" alt="Traditional banya ritual" />
+        <div class="gallery-overlay"><span>View on Instagram</span></div>
+      </a>
+      <a class="gallery-item" href="https://www.instagram.com/saunaonwheels.life" target="_blank">
+        <img src="images/real1.jpg" alt="Relaxing in cedar sauna" />
+        <div class="gallery-overlay"><span>View on Instagram</span></div>
+      </a>
+    </div>
+    <a class="gallery-cta" href="https://www.instagram.com/saunaonwheels.life" target="_blank">
+      📸 Follow us on Instagram for more
+    </a>
+  </div>
 
   <!-- PASSES & MEMBERSHIP -->
   <div class="section">
