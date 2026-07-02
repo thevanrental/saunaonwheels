@@ -16,7 +16,7 @@
   <meta name="geo.region" content="US-CA" />
   <meta name="geo.placename" content="Los Angeles, California" />
 
-  <!-- Open Graph (Facebook, Instagram, iMessage previews) -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://saunaonwheels.life/" />
   <meta property="og:title" content="Sauna on Wheels — Mobile Wood-Fired Sauna Rentals in LA & OC" />
@@ -33,7 +33,7 @@
   <meta name="twitter:description" content="We bring a wood-fired sauna to your door. Private rentals, events & memberships. Los Angeles & Orange County." />
   <meta name="twitter:image" content="https://saunaonwheels.life/images/real3.jpg" />
 
-  <!-- JSON-LD Structured Data (Google rich results) -->
+  <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -66,36 +66,9 @@
       "@type": "OfferCatalog",
       "name": "Sauna Services",
       "itemListElement": [
-        {
-          "@type": "Offer",
-          "name": "Lake Piru Sauna Ticket",
-          "price": "40",
-          "priceCurrency": "USD"
-        },
-        {
-          "@type": "Offer",
-          "name": "Lake Piru Unlimited Sauna Pass",
-          "price": "100",
-          "priceCurrency": "USD"
-        },
-        {
-          "@type": "Offer",
-          "name": "Monthly Membership",
-          "price": "149",
-          "priceCurrency": "USD"
-        },
-        {
-          "@type": "Offer",
-          "name": "3-Hour Private Sauna Rental",
-          "price": "450",
-          "priceCurrency": "USD"
-        },
-        {
-          "@type": "Offer",
-          "name": "Full Day Private Sauna Rental",
-          "price": "600",
-          "priceCurrency": "USD"
-        }
+        { "@type": "Offer", "name": "Monthly Membership", "price": "149", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "3-Hour Private Sauna Rental", "price": "450", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Full Day Private Sauna Rental", "price": "600", "priceCurrency": "USD" }
       ]
     }
   }
@@ -212,9 +185,7 @@
       letter-spacing: -1px;
     }
 
-    .hero h1 span {
-      color: var(--amber-light);
-    }
+    .hero h1 span { color: var(--amber-light); }
 
     .hero-sub {
       font-size: clamp(15px, 3.5vw, 18px);
@@ -276,7 +247,6 @@
     .stats {
       display: flex;
       justify-content: center;
-      gap: 0;
       background: var(--bg2);
       border-top: 1px solid var(--card-border);
       border-bottom: 1px solid var(--card-border);
@@ -316,9 +286,7 @@
     }
 
     /* ─── SECTION ─── */
-    .section {
-      margin-top: 64px;
-    }
+    .section { margin-top: 64px; }
 
     .section-header {
       display: flex;
@@ -480,9 +448,7 @@
       background: var(--bg3);
     }
 
-    .gallery-big {
-      grid-row: span 2;
-    }
+    .gallery-big { grid-row: span 2; }
 
     .gallery-item img {
       width: 100%;
@@ -492,9 +458,7 @@
       transition: transform 0.4s ease;
     }
 
-    .gallery-item:hover img {
-      transform: scale(1.06);
-    }
+    .gallery-item:hover img { transform: scale(1.06); }
 
     .gallery-overlay {
       position: absolute;
@@ -507,9 +471,7 @@
       transition: opacity 0.3s;
     }
 
-    .gallery-item:hover .gallery-overlay {
-      opacity: 1;
-    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
 
     .gallery-overlay span {
       font-size: 12px;
@@ -629,11 +591,7 @@
       line-height: 1.7;
     }
 
-    footer a {
-      color: var(--text-dim);
-      text-decoration: none;
-    }
-
+    footer a { color: var(--text-dim); text-decoration: none; }
     footer a:hover { color: var(--text-muted); }
 
     /* ─── GLOW DIVIDER ─── */
@@ -659,10 +617,7 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    .fade-up {
-      animation: fadeUp 0.6s ease both;
-    }
-
+    .fade-up { animation: fadeUp 0.6s ease both; }
     .fade-up:nth-child(1) { animation-delay: 0.05s; }
     .fade-up:nth-child(2) { animation-delay: 0.12s; }
     .fade-up:nth-child(3) { animation-delay: 0.19s; }
@@ -763,30 +718,6 @@
         </div>
         <div class="card-right">
           <div class="card-price">$200</div>
-          <div class="card-arrow">→</div>
-        </div>
-      </a>
-
-      <a class="card fade-up" href="https://book.stripe.com/3cIbJ197k4Kl8SSeTH2kw0c" target="_blank">
-        <div class="card-icon">🌊</div>
-        <div class="card-body">
-          <div class="card-title">Lake Piru Sauna Ticket</div>
-          <div class="card-desc">Valid for one day at Lake Piru</div>
-        </div>
-        <div class="card-right">
-          <div class="card-price">$40</div>
-          <div class="card-arrow">→</div>
-        </div>
-      </a>
-
-      <a class="card fade-up" href="https://book.stripe.com/14AcN5dnAekV2uufXL2kw0b" target="_blank">
-        <div class="card-icon">♾️</div>
-        <div class="card-body">
-          <div class="card-title">Lake Piru Unlimited Sauna Pass</div>
-          <div class="card-desc">Unlimited sauna access during the event</div>
-        </div>
-        <div class="card-right">
-          <div class="card-price">$100</div>
           <div class="card-arrow">→</div>
         </div>
       </a>
