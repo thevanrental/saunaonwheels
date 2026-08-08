@@ -3,20 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Private Events & Custom Sauna Experiences | Sauna on Wheels</title>
-  <meta name="description" content="Plan a private Sauna on Wheels event in Orange County or Los Angeles. Request multiple sauna trailers, cold plunge, event staff, custom timing and full-service setup. Get a custom quote." />
+  <title>Private Events & Production Sauna Rentals | Sauna on Wheels</title>
+  <meta name="description" content="Custom Sauna on Wheels rentals for private events, film and TV productions, commercials, photo shoots, music videos and corporate wellness in Orange County and Los Angeles. Multiple saunas, cold plunge, staff and full setup available by request." />
+  <meta name="keywords" content="mobile sauna film production Los Angeles, sauna film location Orange County, sauna trailer production rental, sauna commercial shoot, photo shoot sauna rental, music video sauna location, TV production sauna rental, film location sauna Los Angeles, production company sauna rental, private event sauna rental, corporate wellness sauna, cold plunge event rental" />
   <link rel="canonical" href="https://saunaonwheels.life/private-events.html" />
   <meta name="robots" content="index, follow" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Private Events & Custom Sauna Experiences | Sauna on Wheels" />
-  <meta property="og:description" content="Custom mobile sauna experiences for private parties, corporate wellness, retreats and special events. Multiple saunas, cold plunge and staff available by request." />
+  <meta property="og:title" content="Private Events & Production Sauna Rentals | Sauna on Wheels" />
+  <meta property="og:description" content="We welcome production companies, film crews and creative teams. Request our mobile wood-fired sauna for film, TV, commercials, photo shoots, music videos, private events and custom wellness activations." />
   <meta property="og:url" content="https://saunaonwheels.life/private-events.html" />
   <meta property="og:image" content="https://saunaonwheels.life/images/real3.jpg" />
   <meta property="og:site_name" content="Sauna on Wheels" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Private Events & Custom Sauna Experiences | Sauna on Wheels" />
-  <meta name="twitter:description" content="Tell us about your event and we will build a custom sauna experience around your location, guest count and needs." />
+  <meta name="twitter:title" content="Private Events & Production Sauna Rentals | Sauna on Wheels" />
+  <meta name="twitter:description" content="Mobile sauna rentals for production companies, film and TV shoots, commercials, photography, music videos, private events and custom wellness experiences." />
   <meta name="twitter:image" content="https://saunaonwheels.life/images/real3.jpg" />
 
   <!-- Google tag (gtag.js) -->
@@ -32,8 +33,8 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Private Events & Custom Sauna Experiences",
-    "serviceType": "Mobile Sauna Event Rental",
+    "name": "Private Events, Film & Production Sauna Rentals",
+    "serviceType": "Mobile Sauna Event and Production Rental",
     "provider": {
       "@type": "LocalBusiness",
       "name": "Sauna on Wheels",
@@ -43,7 +44,12 @@
       {"@type": "AdministrativeArea", "name": "Orange County, CA"},
       {"@type": "City", "name": "Los Angeles"}
     ],
-    "description": "Custom mobile wood-fired sauna experiences for private parties, corporate wellness events, retreats, productions and special events. Multiple sauna trailers, cold plunge, staff and custom service options are available by request and subject to availability.",
+    "audience": [
+      {"@type": "BusinessAudience", "audienceType": "Film and television production companies"},
+      {"@type": "BusinessAudience", "audienceType": "Commercial, photo and music video production teams"},
+      {"@type": "Audience", "audienceType": "Private event and corporate wellness clients"}
+    ],
+    "description": "Custom mobile wood-fired sauna rentals for private events, film and television productions, commercials, photo shoots, music videos, corporate wellness activations, retreats and special events. Multiple sauna trailers, cold plunge, staff, delivery, setup and custom service options are available by request and subject to availability.",
     "url": "https://saunaonwheels.life/private-events.html"
   }
   </script>
@@ -120,7 +126,7 @@
       margin-bottom: 18px;
     }
     .hero p {
-      max-width: 680px;
+      max-width: 700px;
       margin: 0 auto;
       color: #b89060;
       font-size: clamp(15px,3vw,18px);
@@ -163,6 +169,47 @@
       color: #9a7348;
       font-size: 14px;
       line-height: 1.75;
+    }
+    .production-callout {
+      margin: 0 0 34px;
+      padding: 26px 24px;
+      border: 1px solid rgba(224,144,64,.34);
+      border-radius: 18px;
+      background: linear-gradient(135deg,rgba(80,37,10,.72),rgba(28,14,4,.94));
+      position: relative;
+      overflow: hidden;
+    }
+    .production-callout::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg,transparent,rgba(224,144,64,.75),transparent);
+    }
+    .production-label {
+      color: #e09040;
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 8px;
+    }
+    .production-callout h2 { font-size: clamp(22px,4.5vw,30px); margin-bottom: 10px; }
+    .production-callout p { color: #aa8053; font-size: 14px; line-height: 1.75; }
+    .production-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 17px;
+    }
+    .production-tag {
+      padding: 7px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(200,120,50,.25);
+      background: rgba(200,120,50,.07);
+      color: #c8a870;
+      font-size: 11px;
+      font-weight: 600;
     }
     .options-grid {
       display: grid;
@@ -297,6 +344,7 @@
       .topbar-inner { align-items: flex-start; }
       .options-grid, .checks { grid-template-columns: 1fr; }
       .form-wrap { padding: 22px 16px; }
+      .production-callout { padding: 22px 18px; }
     }
   </style>
 </head>
@@ -310,10 +358,11 @@
 
   <header class="hero">
     <div class="hero-inner">
-      <div class="eyebrow">🔥 Custom Event Request</div>
-      <h1>Build a Private Sauna Experience Around Your Event</h1>
-      <p>Planning a private party, corporate wellness day, retreat, production or special event? Tell us what you need and we can build a custom Sauna on Wheels package for your location and guest count.</p>
+      <div class="eyebrow">🔥 Custom Event & Production Request</div>
+      <h1>Custom Sauna Experiences for Events & Productions</h1>
+      <p>Planning a private party, corporate wellness day, retreat, film or TV production, commercial shoot, photo shoot, music video or special event? Tell us what you need and we can build a custom Sauna on Wheels package around your location, schedule, crew and guest count.</p>
       <div class="hero-pills">
+        <span class="pill">Film & TV Production</span>
         <span class="pill">Multiple Saunas</span>
         <span class="pill">Cold Plunge</span>
         <span class="pill">Event Staff</span>
@@ -326,16 +375,35 @@
 
   <main>
     <section class="intro">
-      <div class="section-eyebrow">Made To Fit Your Event</div>
+      <div class="section-eyebrow">Made To Fit Your Event or Production</div>
       <h2>More Than a Standard Rental</h2>
-      <p>For larger or more customized events, we can coordinate additional equipment and service options by request. Share the details below and we will review availability, logistics and pricing before sending you a custom quote.</p>
+      <p>For larger, creative or highly customized projects, we can coordinate additional equipment and service options by request. Share the details below and we will review availability, logistics and pricing before sending you a custom quote.</p>
     </section>
 
-    <section class="options-grid" aria-label="Custom event options">
+    <section class="production-callout" aria-label="Film and production company rentals">
+      <div class="production-label">🎬 Production Companies Welcome</div>
+      <h2>Film, TV, Commercial & Photo Production</h2>
+      <p>We are happy to work directly with production companies, producers, location managers, agencies and creative teams. Sauna on Wheels can be provided by request as a practical sauna, production vehicle, on-camera set piece or unique wellness element for film shoots, television, commercials, branded content, photo shoots and music videos. We can coordinate delivery, placement, flexible production timing, multiple sauna units and additional support based on your call sheet, location requirements and production needs.</p>
+      <div class="production-tags">
+        <span class="production-tag">Film & TV</span>
+        <span class="production-tag">Commercials</span>
+        <span class="production-tag">Photo Shoots</span>
+        <span class="production-tag">Music Videos</span>
+        <span class="production-tag">Branded Content</span>
+        <span class="production-tag">Location Managers</span>
+      </div>
+    </section>
+
+    <section class="options-grid" aria-label="Custom event and production options">
+      <article class="option">
+        <div class="option-icon">🎬</div>
+        <h3>Production & Film Shoots</h3>
+        <p>Flexible mobile sauna rental for production companies, film and TV crews, commercials, photography, music videos and branded content.</p>
+      </article>
       <article class="option">
         <div class="option-icon">🛖</div>
         <h3>Multiple Sauna Trailers</h3>
-        <p>Need more capacity? Tell us how many sauna units you are looking for and we will confirm what can be arranged.</p>
+        <p>Need more capacity or multiple units on set? Tell us how many sauna units you are looking for and we will confirm what can be arranged.</p>
       </article>
       <article class="option">
         <div class="option-icon">🧊</div>
@@ -344,33 +412,28 @@
       </article>
       <article class="option">
         <div class="option-icon">🤝</div>
-        <h3>Event Staff</h3>
-        <p>Staff support can be requested for setup, guest flow, sauna operations and event coordination.</p>
+        <h3>Event & Production Staff</h3>
+        <p>Staff support can be requested for setup, guest or talent flow, sauna operations and event or production coordination.</p>
       </article>
       <article class="option">
         <div class="option-icon">🚚</div>
         <h3>Delivery & Full Setup</h3>
-        <p>We can coordinate delivery, placement, setup and pickup based on your event location and access.</p>
+        <p>We can coordinate delivery, placement, setup and pickup based on your venue, production location, access and schedule.</p>
       </article>
       <article class="option">
         <div class="option-icon">🔥</div>
         <h3>Heat & Firewood Support</h3>
-        <p>Wood-fired heat, firewood and operating support can be included depending on the event package.</p>
-      </article>
-      <article class="option">
-        <div class="option-icon">✨</div>
-        <h3>Custom Add-Ons</h3>
-        <p>Have another idea? Include it in your request and we will let you know what can be provided or coordinated.</p>
+        <p>Wood-fired heat, firewood and operating support can be included depending on the event or production package.</p>
       </article>
     </section>
 
-    <div class="availability">All custom services, equipment quantities and staffing are subject to availability, event location, access, timing and final quote.</div>
+    <div class="availability">All custom services, production support, equipment quantities and staffing are subject to availability, location, access, timing and final quote.</div>
 
     <section class="form-wrap" id="request-form">
       <div class="form-head">
         <div class="section-eyebrow">Tell Us What You Need</div>
-        <h2>Request a Custom Event Quote</h2>
-        <p>No payment is collected here. Send the details and we will follow up directly.</p>
+        <h2>Request a Custom Quote</h2>
+        <p>Private event or production company — send us the project details and we will follow up directly. No payment is collected here.</p>
       </div>
 
       <form id="eventRequestForm">
@@ -396,25 +459,46 @@
           </div>
         </div>
 
+        <div class="grid-2">
+          <div class="field">
+            <label for="projectType">Event / Project Type *</label>
+            <select id="projectType" name="projectType" required>
+              <option value="">Select one</option>
+              <option value="Private Event">Private Event</option>
+              <option value="Corporate Wellness">Corporate Wellness</option>
+              <option value="Film / TV Production">Film / TV Production</option>
+              <option value="Commercial / Branded Content">Commercial / Branded Content</option>
+              <option value="Photo Shoot">Photo Shoot</option>
+              <option value="Music Video">Music Video</option>
+              <option value="Retreat / Wellness Activation">Retreat / Wellness Activation</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="company">Company / Production Company <span class="optional">(optional)</span></label>
+            <input id="company" name="company" autocomplete="organization" placeholder="Company name" />
+          </div>
+        </div>
+
         <div class="field">
           <label for="subject">Subject *</label>
-          <input id="subject" name="subject" placeholder="Example: Private wellness event in Newport Beach" required />
+          <input id="subject" name="subject" placeholder="Example: Commercial shoot in Los Angeles" required />
         </div>
 
         <div class="grid-2">
           <div class="field">
-            <label for="eventDate">Event Date <span class="optional">(optional)</span></label>
+            <label for="eventDate">Event / Shoot Date <span class="optional">(optional)</span></label>
             <input id="eventDate" name="eventDate" type="date" />
           </div>
           <div class="field">
-            <label for="location">City / Event Location <span class="optional">(optional)</span></label>
-            <input id="location" name="location" placeholder="City or venue" />
+            <label for="location">City / Location <span class="optional">(optional)</span></label>
+            <input id="location" name="location" placeholder="City, venue or production location" />
           </div>
         </div>
 
         <div class="grid-2">
           <div class="field">
-            <label for="guestCount">Estimated Guests <span class="optional">(optional)</span></label>
+            <label for="guestCount">Guests / Crew Size <span class="optional">(optional)</span></label>
             <input id="guestCount" name="guestCount" type="number" min="1" inputmode="numeric" placeholder="Example: 40" />
           </div>
           <div class="field">
@@ -431,12 +515,12 @@
 
         <div class="checks">
           <label class="check" for="coldPlunge"><input id="coldPlunge" name="coldPlunge" type="checkbox" /> Interested in cold plunge</label>
-          <label class="check" for="staff"><input id="staff" name="staff" type="checkbox" /> Interested in event staff</label>
+          <label class="check" for="staff"><input id="staff" name="staff" type="checkbox" /> Interested in event / production staff</label>
         </div>
 
         <div class="field">
-          <label for="request">Tell Us About Your Event *</label>
-          <textarea id="request" name="request" placeholder="Describe the event, schedule, venue access, what you would like us to provide, and any special requests." required></textarea>
+          <label for="request">Tell Us About Your Event or Production *</label>
+          <textarea id="request" name="request" placeholder="Describe the event or production, schedule, call time, venue/location access, intended sauna use, what you would like us to provide, and any special requests." required></textarea>
         </div>
 
         <div class="actions">
@@ -447,7 +531,7 @@
       </form>
     </section>
 
-    <div class="direct">Prefer to contact us directly? Email <a href="mailto:info@saunaonwheels.life">info@saunaonwheels.life</a> or message us on <a href="https://wa.me/13236107634" target="_blank" rel="noopener">WhatsApp</a>.</div>
+    <div class="direct">Production company or private client? Contact us directly at <a href="mailto:info@saunaonwheels.life">info@saunaonwheels.life</a> or message us on <a href="https://wa.me/13236107634" target="_blank" rel="noopener">WhatsApp</a>.</div>
   </main>
 
   <footer>© 2026 Sauna on Wheels · Orange County & Los Angeles</footer>
@@ -461,6 +545,8 @@
       const lastName = document.getElementById('lastName').value.trim();
       const email = document.getElementById('email').value.trim();
       const phone = document.getElementById('phone').value.trim();
+      const projectType = document.getElementById('projectType').value;
+      const company = document.getElementById('company').value.trim();
       const subject = document.getElementById('subject').value.trim();
       const eventDate = document.getElementById('eventDate').value;
       const location = document.getElementById('location').value.trim();
@@ -471,18 +557,20 @@
       const request = document.getElementById('request').value.trim();
 
       const lines = [
-        'Private Event Request — Sauna on Wheels',
+        'Custom Event / Production Request — Sauna on Wheels',
         '',
         `Name: ${firstName} ${lastName}`,
         `Email: ${email}`,
         `Phone / WhatsApp: ${phone || 'Not provided'}`,
+        `Event / Project Type: ${projectType}`,
+        `Company / Production Company: ${company || 'Not provided'}`,
         `Subject: ${subject}`,
-        `Event date: ${eventDate || 'Not provided'}`,
+        `Event / shoot date: ${eventDate || 'Not provided'}`,
         `Location: ${location || 'Not provided'}`,
-        `Estimated guests: ${guestCount || 'Not provided'}`,
+        `Guests / crew size: ${guestCount || 'Not provided'}`,
         `Requested number of saunas: ${saunaCount}`,
         `Cold plunge requested: ${coldPlunge}`,
-        `Event staff requested: ${staff}`,
+        `Event / production staff requested: ${staff}`,
         '',
         'Request:',
         request
@@ -494,7 +582,7 @@
       event.preventDefault();
       if (!form.reportValidity()) return;
       const data = getRequestText();
-      window.location.href = `mailto:info@saunaonwheels.life?subject=${encodeURIComponent('[Private Event] ' + data.subject)}&body=${encodeURIComponent(data.body)}`;
+      window.location.href = `mailto:info@saunaonwheels.life?subject=${encodeURIComponent('[Custom Request] ' + data.subject)}&body=${encodeURIComponent(data.body)}`;
     });
 
     whatsappButton.addEventListener('click', function () {
