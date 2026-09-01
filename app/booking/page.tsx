@@ -18,43 +18,23 @@ export const metadata: Metadata = {
 
 const bookingOptions = [
   {
-    eyebrow: 'Pick it up in Brea',
-    name: 'Sauna trailer rental',
-    price: '$250',
-    unit: 'rental',
-    description: 'Trailer rental only. Pick up the sauna from our Brea location and create the experience on your schedule.',
-    includes: ['Sauna trailer', 'Harvia wood-fired stove', 'Off-grid lighting', 'Book securely on Towlos'],
-    href: 'https://towlos.com/listing/enclosed-trailer/united-states/brea-ca/102602',
-    cta: 'Book on Towlos',
-  },
-  {
-    eyebrow: 'Flexible overnight option',
-    name: 'Outdoorsy rental',
-    price: '$300',
-    unit: 'per night',
-    description: 'Reserve through Outdoorsy with delivery availability and platform-supported booking.',
-    includes: ['Delivery available', 'Sauna essentials', 'Two venik bundles', 'Book securely on Outdoorsy'],
-    href: 'https://www.outdoorsy.com/rv-rental/brea_ca/2026_saw_carrier_549352-listing',
-    cta: 'Book on Outdoorsy',
-  },
-  {
-    eyebrow: 'Our essential private session',
+    eyebrow: 'Orange County private session',
     name: '3-hour private sauna',
     price: '$450',
     unit: '3 hours',
-    description: 'A complete private sauna experience delivered to your location and ready when you arrive.',
-    includes: ['Delivery and pickup', 'Full setup', 'Heating and firewood', 'Two venik bundles'],
+    description: 'Orange County pricing for a complete private sauna experience, delivered and ready when you arrive.',
+    includes: ['Orange County delivery and pickup', 'Full setup', 'Heating and firewood', 'Two venik bundles'],
     href: 'https://buy.stripe.com/7sYaEXgzMfoZd987rf2kw05',
     cta: 'Reserve 3 hours',
     featured: true,
   },
   {
-    eyebrow: 'More time to slow down',
+    eyebrow: 'Orange County full-day experience',
     name: 'Full-day private sauna',
     price: '$600',
     unit: 'full day',
-    description: 'Keep the sauna for the day — ideal for longer gatherings, celebrations, and an unhurried reset.',
-    includes: ['Delivery and pickup', 'Full setup', 'Heating and firewood', 'Two venik bundles'],
+    description: 'Orange County pricing for a full day — ideal for longer gatherings, celebrations, and an unhurried reset.',
+    includes: ['Orange County delivery and pickup', 'Full setup', 'Heating and firewood', 'Two venik bundles'],
     href: 'https://buy.stripe.com/fZu6oH5V8ccNd9826V2kw04',
     cta: 'Reserve full day',
   },
@@ -76,7 +56,7 @@ export default function BookingPage() {
           <p className="eyebrow dark">Choose your heat</p>
           <h1>Book your<br /><em>sauna.</em></h1>
         </div>
-        <p>Four ways to bring real wood-fired heat into your day — from a simple trailer pickup to a fully delivered private experience.</p>
+        <p>Two fully delivered private sauna experiences for Orange County. Los Angeles and other locations are available by custom quote.</p>
       </section>
 
       <section className="booking-grid" aria-label="Sauna rental options">
