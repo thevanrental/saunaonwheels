@@ -85,6 +85,7 @@ export default function Home() {
           <a onClick={closeMenu} href="#experiences">Experiences</a>
           <a onClick={closeMenu} href="#how">How it works</a>
           <a onClick={closeMenu} href="#story">Our sauna</a>
+          <a onClick={closeMenu} href="#private-events">Private events</a>
           <a onClick={closeMenu} href="#faq">FAQ</a>
         </nav>
         <a onClick={closeMenu} className="primary-button menu-cta" href="/booking">Book your sauna</a>
@@ -144,6 +145,23 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="home-events" id="private-events">
+        <div className="home-events-main">
+          <p className="eyebrow">Beyond a private session</p>
+          <h2>Private events<br />& custom<br /><em>experiences.</em></h2>
+          <p>Bring real wood-fired heat to celebrations, wellness gatherings, retreats, brand activations, film sets and photo shoots. We shape the setup around your location, schedule and guests.</p>
+          <a className="primary-button light" href="/private-events">Plan a private event</a>
+        </div>
+        <div className="home-events-list" aria-label="Private event services">
+          <p className="eyebrow">Built around your event</p>
+          <div><span>Private celebrations</span><small>Birthdays · Gatherings · Retreats</small></div>
+          <div><span>Wellness & corporate</span><small>Team experiences · Brand activations</small></div>
+          <div><span>Film & production</span><small>Commercials · Photo shoots · Music videos</small></div>
+          <div><span>Custom setups</span><small>Multiple saunas · Cold plunge · Event staff</small></div>
+          <a className="text-link light-text-link" href="/private-events">Explore Private Events <span>→</span></a>
+        </div>
+      </section>
+
       <section className="quote">
         <p>“The best kind of reset: fire, steam, cold air, and nowhere else to be.”</p>
         <span>— The Sauna on Wheels feeling</span>
@@ -182,7 +200,7 @@ export default function Home() {
         </a>
         <p>Mobile wood-fired sauna<br />Los Angeles · Orange County</p>
         <div>
-          <a href="#experiences">Experiences</a><a href="#faq">FAQ</a><a href="#reserve">Book</a>
+          <a href="#experiences">Experiences</a><a href="#private-events">Private Events</a><a href="#faq">FAQ</a><a href="#reserve">Book</a>
           <a href="https://www.instagram.com/saunaonwheels.life" target="_blank" rel="noreferrer">Instagram ↗</a>
           <a href="https://wa.me/13236107634" target="_blank" rel="noreferrer">WhatsApp ↗</a>
         </div>

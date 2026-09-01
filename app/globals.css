@@ -164,6 +164,20 @@ a { color: inherit; text-decoration: none; }
 .story-photo img { width: 100%; height: 100%; object-fit: cover; }
 .photo-label { position: absolute; bottom: 26px; left: 28px; color: white; font-size: 9px; letter-spacing: .2em; }
 
+.home-events { display: grid; grid-template-columns: 1.08fr .92fr; min-height: 900px; color: white; }
+.home-events-main { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: clamp(85px, 10vw, 150px) clamp(26px, 8vw, 120px); background: var(--ember); }
+.home-events-main h2 { margin: 0; font: 400 clamp(59px, 7.7vw, 118px)/.88 Georgia, serif; letter-spacing: -.06em; }
+.home-events-main h2 em { color: #f8d4c1; font-weight: 400; }
+.home-events-main > p:not(.eyebrow) { max-width: 650px; margin: 38px 0; font: 400 clamp(19px, 2vw, 25px)/1.48 Georgia, serif; color: rgba(255,255,255,.8); }
+.home-events-main .primary-button { margin-top: 4px; }
+.home-events-list { display: flex; flex-direction: column; justify-content: center; padding: clamp(80px, 10vw, 145px) clamp(28px, 7vw, 105px); background: var(--ink); }
+.home-events-list > .eyebrow { margin-bottom: 45px; color: #f0a278; }
+.home-events-list > div { display: flex; justify-content: space-between; gap: 30px; padding: 27px 0; border-top: 1px solid rgba(255,255,255,.2); }
+.home-events-list > div:nth-last-of-type(1) { border-bottom: 1px solid rgba(255,255,255,.2); }
+.home-events-list span { font: 400 clamp(24px, 2.5vw, 36px)/1.1 Georgia, serif; }
+.home-events-list small { max-width: 220px; color: rgba(255,255,255,.53); font-size: 9px; line-height: 1.5; letter-spacing: .1em; text-align: right; text-transform: uppercase; }
+.light-text-link { margin-top: 45px; color: white; }
+
 .quote { padding: clamp(100px, 16vw, 230px) clamp(24px, 10vw, 160px); background: white; text-align: center; }
 .quote p { max-width: 1150px; margin: 0 auto; font: 400 clamp(42px, 7vw, 98px)/1 Georgia, serif; letter-spacing: -.05em; }
 .quote span { display: block; margin-top: 34px; color: #777; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
@@ -299,6 +313,11 @@ footer > div { display: flex; gap: 22px; font-size: 10px; letter-spacing: .12em;
   .statement { padding-left: 22px; padding-right: 22px; }
   .story { grid-template-columns: 1fr; }
   .story-photo { min-height: 82svh; }
+  .home-events { grid-template-columns: 1fr; }
+  .home-events-main, .home-events-list { padding-left: 22px; padding-right: 22px; }
+  .home-events-main { min-height: 760px; }
+  .home-events-list > div { flex-direction: column; gap: 10px; }
+  .home-events-list small { max-width: none; text-align: left; }
   .faq { grid-template-columns: 1fr; padding-left: 22px; padding-right: 22px; }
   .reserve { min-height: 88svh; }
   footer { grid-template-columns: 1fr; }
