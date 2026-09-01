@@ -230,7 +230,10 @@ footer > div { display: flex; gap: 22px; font-size: 10px; letter-spacing: .12em;
 .custom-event > div:last-child > p { max-width: 500px; margin: 0 0 32px; font: 400 clamp(19px, 2vw, 26px)/1.45 Georgia, serif; }
 .booking-note { display: flex; justify-content: space-between; gap: 30px; padding: 42px clamp(24px, 8vw, 130px); background: white; font: 400 clamp(18px, 2.2vw, 27px)/1.3 Georgia, serif; }
 .booking-note a { color: var(--ember); }
-.booking-footer { display: flex; justify-content: space-between; padding: 30px clamp(24px, 8vw, 130px); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
+.booking-footer { display: flex; justify-content: space-between; align-items: center; gap: 28px; padding: 30px clamp(24px, 8vw, 130px); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
+.footer-socials { display: flex; gap: 22px; }
+.footer-socials a { color: inherit; transition: color .2s; }
+.footer-socials a:hover { color: #f0a278; }
 
 .events-page { background: var(--cream); }
 .events-header { position: absolute; inset: 0 0 auto; z-index: 3; display: flex; justify-content: space-between; align-items: center; padding: 24px clamp(22px, 6vw, 90px); color: white; }
@@ -249,8 +252,7 @@ footer > div { display: flex; gap: 22px; font-size: 10px; letter-spacing: .12em;
 .events-intro > p { max-width: 600px; margin: 0 0 8px; font: 400 clamp(20px, 2.3vw, 30px)/1.4 Georgia, serif; }
 .events-options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: #bdb6a8; padding: 1px; }
 .events-options article { min-height: 360px; padding: clamp(30px, 5vw, 66px); background: #f8f6f0; }
-.events-options article > span { color: var(--ember); font-size: 10px; letter-spacing: .15em; }
-.events-options h3 { max-width: 390px; margin: 60px 0 18px; font: 400 clamp(31px, 3.5vw, 51px)/.98 Georgia, serif; letter-spacing: -.045em; }
+.events-options h3 { max-width: 390px; margin: 0 0 18px; font: 400 clamp(31px, 3.5vw, 51px)/.98 Georgia, serif; letter-spacing: -.045em; }
 .events-options p { max-width: 420px; margin: 0; color: #66706e; line-height: 1.55; }
 .production-band { padding: clamp(100px, 14vw, 200px) clamp(24px, 8vw, 130px); background: var(--ink); color: white; }
 .production-band h2 { max-width: 1170px; margin: 0; font: 400 clamp(58px, 8.5vw, 126px)/.9 Georgia, serif; letter-spacing: -.06em; }
@@ -320,7 +322,6 @@ footer > div { display: flex; gap: 22px; font-size: 10px; letter-spacing: .12em;
   .events-intro { grid-template-columns: 1fr; gap: 42px; padding-left: 22px; padding-right: 22px; }
   .events-options { grid-template-columns: 1fr; }
   .events-options article { min-height: 300px; padding: 42px 22px; }
-  .events-options h3 { margin-top: 48px; }
   .production-band { padding-left: 22px; padding-right: 22px; }
   .event-request { grid-template-columns: 1fr; padding-left: 22px; padding-right: 22px; }
   .event-form-intro { position: static; }

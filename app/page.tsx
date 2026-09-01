@@ -181,7 +181,11 @@ export default function Home() {
           <span><strong>SAUNA ON WHEELS</strong><small>WOOD FIRE. OCEAN AIR.</small></span>
         </a>
         <p>Mobile wood-fired sauna<br />Los Angeles · Orange County</p>
-        <div><a href="#experiences">Experiences</a><a href="#faq">FAQ</a><a href="#reserve">Book</a></div>
+        <div>
+          <a href="#experiences">Experiences</a><a href="#faq">FAQ</a><a href="#reserve">Book</a>
+          <a href="https://www.instagram.com/saunaonwheels.life" target="_blank" rel="noreferrer">Instagram ↗</a>
+          <a href="https://wa.me/13236107634" target="_blank" rel="noreferrer">WhatsApp ↗</a>
+        </div>
         <span className="copyright">© 2026 Sauna on Wheels</span>
       </footer>
     </main>

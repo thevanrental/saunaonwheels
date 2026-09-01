@@ -79,9 +79,8 @@ export default function PrivateEventsPage() {
       </section>
 
       <section className="events-options" aria-label="Custom event options">
-        {options.map(([title, copy], index) => (
+        {options.map(([title, copy]) => (
           <article key={title}>
-            <span>{String(index + 1).padStart(2, '0')}</span>
             <h3>{title}</h3>
             <p>{copy}</p>
           </article>
@@ -155,7 +154,12 @@ export default function PrivateEventsPage() {
       </section>
 
       <footer className="booking-footer events-footer">
-        <span>© 2026 Sauna on Wheels</span><span>Orange County · Los Angeles · By request</span>
+        <span>© 2026 Sauna on Wheels</span>
+        <div className="footer-socials">
+          <a href="https://www.instagram.com/saunaonwheels.life" target="_blank" rel="noreferrer">Instagram ↗</a>
+          <a href="https://wa.me/13236107634" target="_blank" rel="noreferrer">WhatsApp ↗</a>
+        </div>
+        <span>Orange County · Los Angeles · By request</span>
       </footer>
     </main>
   );

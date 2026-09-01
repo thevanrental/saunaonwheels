@@ -115,6 +115,10 @@ export default function BookingPage() {
 
       <footer className="booking-footer">
         <span>© 2026 Sauna on Wheels</span>
+        <div className="footer-socials">
+          <a href="https://www.instagram.com/saunaonwheels.life" target="_blank" rel="noreferrer">Instagram ↗</a>
+          <a href="https://wa.me/13236107634" target="_blank" rel="noreferrer">WhatsApp ↗</a>
+        </div>
         <span>Orange County first · Los Angeles too</span>
       </footer>
     </main>
