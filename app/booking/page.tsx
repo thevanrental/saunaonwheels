@@ -2,7 +2,10 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Book Your Sauna | Sauna on Wheels',
-  description: 'Choose a Sauna on Wheels rental option in Orange County or Los Angeles.',
+  description: 'Book a 3-hour or full-day private mobile wood-fired sauna experience in Orange County.',
+  keywords: ['book mobile sauna Orange County', 'private sauna rental Orange County', '3 hour sauna rental', 'full day sauna rental'],
+  alternates: { canonical: '/booking/' },
+  robots: { index: true, follow: true },
   openGraph: {
     title: 'Book Your Sauna | Sauna on Wheels',
     description: 'Choose a Sauna on Wheels rental option in Orange County or Los Angeles.',
