@@ -1,9 +1,10 @@
-# Sauna on Wheels 🚐🔥
+# Sauna on Wheels — new site design
 
-**Mobile Sauna Experience Across Los Angeles & Orange County**
+Source for the new Sauna on Wheels website concept.
 
-Relax anywhere — beaches, driveways, or resorts.  
-Book your private sauna session and enjoy authentic heat wherever you are.
+- Main landing page
+- Booking options page
+- Private Events page with email and WhatsApp request form
+- Towlos pickup price: $250
 
-🌐 https://saunaonwheels.life  
-📞 +1 (323) 610-7634 (WhatsApp Business)
+The production preview includes the full-resolution media and hero video. This branch keeps lightweight, already-public repository images so the source can be reviewed safely without publishing private photo metadata.
