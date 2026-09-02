@@ -138,6 +138,27 @@ a { color: inherit; text-decoration: none; }
 .experience-copy p { max-width: 370px; margin: 0 0 30px; line-height: 1.5; font-size: 15px; color: rgba(255,255,255,.84); }
 .experience-copy a { display: inline-flex; align-items: center; gap: 20px; border-bottom: 1px solid rgba(255,255,255,.7); padding-bottom: 7px; font-size: 11px; letter-spacing: .11em; text-transform: uppercase; }
 
+.community-event { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); min-height: 940px; background: #0c100f; color: white; }
+.community-media { position: relative; min-height: 760px; overflow: hidden; background: #090b0b; }
+.community-media::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgba(6,8,8,.05) 50%, rgba(6,8,8,.72) 100%); }
+.community-media video { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.community-media-label { position: absolute; z-index: 1; left: clamp(22px, 4vw, 60px); bottom: 30px; font-size: 9px; letter-spacing: .18em; text-transform: uppercase; }
+.community-details { display: flex; flex-direction: column; justify-content: center; padding: clamp(80px, 9vw, 140px) clamp(28px, 7vw, 105px); }
+.community-details > .eyebrow { color: #f0a278; }
+.community-details h2 { margin: 0; font: 400 clamp(59px, 7vw, 108px)/.88 Georgia, serif; letter-spacing: -.06em; }
+.community-details h2 em { color: var(--ember); font-weight: 400; }
+.community-lead { max-width: 620px; margin: 38px 0 45px; color: rgba(255,255,255,.72); font: 400 clamp(19px, 2vw, 25px)/1.48 Georgia, serif; }
+.community-facts { margin: 0 0 40px; }
+.community-facts > div { display: grid; grid-template-columns: 100px 1fr; gap: 24px; padding: 22px 0; border-top: 1px solid rgba(255,255,255,.2); }
+.community-facts > div:last-child { border-bottom: 1px solid rgba(255,255,255,.2); }
+.community-facts dt { padding-top: 4px; color: #f0a278; font-size: 9px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.community-facts dd { margin: 0; color: rgba(255,255,255,.68); font: 400 17px/1.45 Georgia, serif; }
+.community-facts dd strong { color: white; font-weight: 400; }
+.community-actions { display: flex; align-items: center; gap: 30px; }
+.community-actions .primary-button { min-width: 210px; }
+.community-poster-link { align-self: flex-start; margin-top: 28px; color: rgba(255,255,255,.48); font-size: 9px; letter-spacing: .13em; text-transform: uppercase; }
+.community-poster-link:hover { color: white; }
+
 .ritual { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); min-height: 920px; background: var(--ink); color: white; }
 .ritual-image { position: relative; min-height: 720px; overflow: hidden; }
 .ritual-image img { width: 100%; height: 100%; object-fit: cover; }
@@ -307,6 +328,14 @@ footer > div { display: flex; gap: 22px; font-size: 10px; letter-spacing: .12em;
   .experience-grid { grid-template-columns: 1fr; padding: 0; gap: 1px; }
   .experience-card { min-height: 78svh; }
   .experience-copy { padding: 26px 22px 34px; }
+  .community-event { grid-template-columns: 1fr; }
+  .community-media { min-height: 78svh; }
+  .community-details { padding: 80px 22px; }
+  .community-details h2 { font-size: clamp(62px, 19vw, 94px); }
+  .community-facts > div { grid-template-columns: 74px 1fr; gap: 14px; }
+  .community-actions { align-items: stretch; flex-direction: column; }
+  .community-actions .primary-button { width: 100%; }
+  .community-actions .text-link { align-self: flex-start; }
   .ritual { grid-template-columns: 1fr; }
   .ritual-image { min-height: 70svh; }
   .ritual-copy { padding: 80px 22px; }
@@ -352,11 +381,13 @@ footer > div { display: flex; gap: 22px; font-size: 10px; letter-spacing: .12em;
   .experience-grid { grid-template-columns: 1fr; }
   .experience-card { min-height: 760px; }
   .ritual, .story { grid-template-columns: 1fr; }
+  .community-event { grid-template-columns: 1fr; }
+  .community-media { min-height: 840px; }
   .ritual-image, .story-photo { min-height: 780px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .hero-media { display: none; }
-  .hero { background: url('https://sauna-on-wheels-la-mockup.workspace-126481.chatgpt.site/media/fire.png') center/cover no-repeat; }
+  .hero { background: url('/media/fire.png') center/cover no-repeat; }
 }
