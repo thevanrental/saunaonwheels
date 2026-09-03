@@ -1,4 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const bookingAppUrl = 'https://sauna-on-wheels-la-mockup.workspace-126481.chatgpt.site/booking';
+  const bookingRoutes = new Map([
+    ['https://buy.stripe.com/7sYaEXgzMfoZd987rf2kw05', `${bookingAppUrl}?package=three-hour`],
+    ['https://buy.stripe.com/fZu6oH5V8ccNd9826V2kw04', `${bookingAppUrl}?package=full-day`],
+    ['https://calendly.com/gavrilkoff/30min', `${bookingAppUrl}?package=three-hour`],
+    ['https://calendly.com/gavrilkoff/all-day-mobile-sauna-orange-county', `${bookingAppUrl}?package=full-day`],
+    ['https://calendly.com/gavrilkoff/sauna-event', bookingAppUrl],
+  ]);
+
+  document.querySelectorAll('a[href]').forEach((link) => {
+    const destination = bookingRoutes.get(link.href);
+    if (!destination) return;
+
+    link.href = destination;
+    link.removeAttribute('target');
+    link.removeAttribute('rel');
+  });
+
   const menu = document.querySelector('.menu-overlay');
   const openMenu = document.querySelector('.menu-button');
   const closeMenu = document.querySelector('.menu-close');
