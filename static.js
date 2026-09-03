@@ -17,6 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('private-event-form');
   if (!form) return;
 
+  const trackLead = (method) => {
+    if (typeof window.gtag !== 'function') return;
+    window.gtag('event', 'generate_lead', {
+      method,
+      lead_type: 'private_event',
+      transport_type: 'beacon',
+    });
+  };
+
   const requestData = () => {
     const data = new FormData(form);
     const value = (name) => String(data.get(name) || '').trim();
@@ -45,12 +54,14 @@ document.addEventListener('DOMContentLoaded', () => {
     event.preventDefault();
     if (!form.reportValidity()) return;
     const { subject, body } = requestData();
+    trackLead('email');
     window.location.href = `mailto:info@saunaonwheels.life?subject=${encodeURIComponent(`[Custom Request] ${subject}`)}&body=${encodeURIComponent(body)}`;
   });
 
   form.querySelector('.whatsapp')?.addEventListener('click', () => {
     if (!form.reportValidity()) return;
     const { body } = requestData();
+    trackLead('whatsapp');
     window.open(`https://wa.me/13236107634?text=${encodeURIComponent(body)}`, '_blank', 'noopener,noreferrer');
   });
 });
