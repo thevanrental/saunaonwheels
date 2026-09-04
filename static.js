@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   ]);
 
   document.querySelectorAll('a[href]').forEach((link) => {
-    const destination = bookingRoutes.get(link.href);
+    const localBookingLink = link.origin === window.location.origin && link.pathname.replace(/\/+$/, '') === '/booking';
+    const destination = localBookingLink ? `${bookingAppUrl}${link.search}` : bookingRoutes.get(link.href);
     if (!destination) return;
 
     link.href = destination;
