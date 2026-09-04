@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const bookingAppUrl = 'https://sauna-on-wheels-la-mockup.workspace-126481.chatgpt.site/booking';
+  const bookingAppUrl = 'https://booking.saunaonwheels.life/booking';
   const bookingRoutes = new Map([
     ['https://buy.stripe.com/7sYaEXgzMfoZd987rf2kw05', `${bookingAppUrl}?package=three-hour`],
     ['https://buy.stripe.com/fZu6oH5V8ccNd9826V2kw04', `${bookingAppUrl}?package=full-day`],
