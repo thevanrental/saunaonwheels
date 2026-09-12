@@ -508,3 +508,5 @@ footer > div { display: flex; gap: 22px; font-size: 10px; letter-spacing: .12em;
   .cold-plunge-rental-title{min-height:620px}
   .cold-plunge-button{width:100%}
 }
+
+.cold-plunge-rental-offer > .cold-plunge-fine-print { margin: -12px 0 28px; color: rgba(255,255,255,.5); font: 12px/1.55 Arial, sans-serif; }
