@@ -484,3 +484,27 @@ footer > div { display: flex; gap: 22px; font-size: 10px; letter-spacing: .12em;
   .hero-media { display: none; }
   .hero { background: url('/media/fire.png') center/cover no-repeat; }
 }
+
+
+/* Standalone cold-plunge rentals */
+.cold-plunge-rental { display: grid; grid-template-columns: 1.08fr .92fr; min-height: 780px; color: white; background: #162823; }
+.cold-plunge-rental-title { display: flex; flex-direction: column; justify-content: center; padding: clamp(80px, 10vw, 150px) clamp(26px, 8vw, 120px); background: #203d37; }
+.cold-plunge-rental-title .eyebrow { color: #9ed8d0; }
+.cold-plunge-rental-title h2 { margin: 0; font: 400 clamp(60px, 8vw, 122px)/.86 Georgia, serif; letter-spacing: -.06em; }
+.cold-plunge-rental-title h2 em { color: #9ed8d0; font-weight: 400; }
+.cold-plunge-rental-offer { display: flex; flex-direction: column; justify-content: center; padding: clamp(75px, 9vw, 135px) clamp(28px, 7vw, 105px); }
+.cold-plunge-rental-offer > p { max-width: 580px; margin: 0 0 34px; color: rgba(255,255,255,.74); font: 400 clamp(19px, 2vw, 26px)/1.48 Georgia, serif; }
+.cold-plunge-price { display: flex; align-items: baseline; gap: 15px; padding: 25px 0; border-top: 1px solid rgba(255,255,255,.2); border-bottom: 1px solid rgba(255,255,255,.2); }
+.cold-plunge-price strong { font: 400 clamp(68px, 8vw, 108px)/1 Georgia, serif; letter-spacing: -.055em; color: #9ed8d0; }
+.cold-plunge-price span { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.55); }
+.cold-plunge-rental-offer ul { list-style: none; margin: 30px 0 36px; padding: 0; }
+.cold-plunge-rental-offer li { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.12); color: rgba(255,255,255,.78); font-size: 15px; }
+.cold-plunge-button { align-self: flex-start; background: #9ed8d0; color: #14251f; }
+.cold-plunge-button:hover { background: white; }
+
+@media(max-width:640px){
+  .cold-plunge-rental{grid-template-columns:1fr}
+  .cold-plunge-rental-title,.cold-plunge-rental-offer{padding-left:22px;padding-right:22px}
+  .cold-plunge-rental-title{min-height:620px}
+  .cold-plunge-button{width:100%}
+}
