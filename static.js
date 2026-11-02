@@ -1,4 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Keep decorative videos playing when media is ready or the visitor returns.
+  document.querySelectorAll('video[autoplay]').forEach((video) => {
+    video.defaultMuted = true;
+    video.muted = true;
+    const play = () => {
+      if (document.visibilityState === 'visible' && video.paused) {
+        video.play().catch(() => {});
+      }
+    };
+    video.addEventListener('loadeddata', play);
+    video.addEventListener('canplay', play);
+    document.addEventListener('visibilitychange', play);
+    document.addEventListener('pointerdown', play);
+    document.addEventListener('keydown', play);
+    window.addEventListener('pageshow', play);
+    play();
+  });
+
   const bookingAppUrl = 'https://booking.saunaonwheels.life/booking';
   const bookingRoutes = new Map([
     ['https://buy.stripe.com/7sYaEXgzMfoZd987rf2kw05', `${bookingAppUrl}?package=three-hour`],
